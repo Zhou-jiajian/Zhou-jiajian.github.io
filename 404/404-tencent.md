@@ -16,6 +16,6 @@ no_comments: true
          <title>404</title>                                                                                                                                        
     </head>
     <body>
-         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homePageName="返回首页" homePageUrl="https://sanshui.findn.cn"></script>
+         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homePageName="返回首页" homePageUrl="https://Zhou-jiajian.github.io"></script>
 	</body>
 </html>

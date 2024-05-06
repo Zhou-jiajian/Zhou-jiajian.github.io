@@ -1,8 +1,8 @@
-const ap = new APlayer({
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>const ap = new APlayer({
 	// 这里命名ap, 与全局音乐播放器ap名称一样 所以在/music页面只出现一个播放器 ; 如果需要同时出现 请命名ap1
     container: document.getElementById('aplayer2'),
 	// mini: false,
-    //fixed: true,//吸底模式
+    fixed: true,//吸底模式
     autoplay: false,//默认是否自动播放
 	//theme: '#0088cc',
     loop: 'all',

@@ -1,6 +1,6 @@
-const ap = new APlayer({
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>const ap = new APlayer({
     container: document.getElementById('aplayer'),
-	// mini: false,
+	mini: false,
     fixed: true,//吸底模式
     autoplay: false,//默认是否自动播放
 	//theme: '#0088cc',
@@ -8,7 +8,7 @@ const ap = new APlayer({
     order: 'random',
 	//order: 'list',
     preload: 'auto',
-    volume: 0.7,//默认音量
+    volume: 0.6,//默认音量
 	lrcType: 3, //使用lrc文件提供歌词
     mutex: true,//是否不允许多个播放器同时播放
     listFolded: true,//是否默认收起播放列表
