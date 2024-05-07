@@ -62,7 +62,60 @@ to {
 	-webkit-transform:translate3d(333px,0,0);
 	transform:translate3d(333px,0,0)
 }
-}.mid-col.show {
+}
+
+
+/*制作左边栏目隐藏的开关按钮 详见https://blog.csdn.net/weixin_41287260/article/details/103050753?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171502089416800225569292%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=171502089416800225569292&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-4-103050753-null-null.nonecase&utm_term=yilia&spm=1018.2226.3001.4450*/
+.mymenucontainer {
+	display:block;
+	cursor:pointer;
+	left:0;
+	top:0;
+	width:35px;
+	height:35px;
+	z-index:9999;
+	position:fixed;
+}
+.bar1 {
+	width:35px;
+	height:3px;
+	background-color:#333;
+	margin:6px 0;
+	transition:0.4s;
+	-webkit-transform:rotate(-45deg) translate(-8px,8px);
+	transform:rotate(-45deg) translate(-8px,8px);
+}
+.bar2 {
+	width:35px;
+	height:3px;
+	background-color:#333;
+	margin:6px 0;
+	transition:0.4s;
+	opacity:0;
+}
+.bar3 {
+	width:35px;
+	height:3px;
+	background-color:#333;
+	margin:6px 0;
+	transition:0.4s;
+	-webkit-transform:rotate(45deg) translate(-4px,-6px);
+	transform:rotate(45deg) translate(-4px,-6px);
+}
+.change .bar1 {
+	-webkit-transform:rotate(0deg) translate(0px,0px);
+	transform:rotate(0deg) translate(0px,0px);
+}
+.change .bar2 {
+	opacity:1;
+}
+.change .bar3 {
+	-webkit-transform:rotate(0deg) translate(0px,0px);
+	transform:rotate(0deg) translate(0px,0px);
+}
+
+
+.mid-col.show {
 	-webkit-animation-duration:.8s;
 	animation-duration:.8s;
 	-webkit-animation-fill-mode:both;
@@ -256,10 +309,11 @@ body { /*更换图片，可以使用相对路径，也可以用网址图片*/
 	color:#1a1a1a;
 	/* background-color:#fff; */
 	min-height:100%;
+	min-width:100%;
      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-    url('https://t9.baidu.com/it/u=2449521265,682159790&fm=193') no-repeat 0% 0%/ cover;
-	background-position: right center;   
-	background-size: auto 100%;
+    url('https://gd-hbimg.huaban.com/127b66d828e03e26d4540c2fc629609488b4fd191513b-ycOLE3') no-repeat 0% 0%/ cover;
+	background-position: right center;   /*水平方向靠右对齐，竖直方向居中*/
+	object-fit: cover;    /* 图片填满容器但不变形 */
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
 	display:block
@@ -277,17 +331,18 @@ progress {
 [hidden],template {
 	display:none
 }
+/*其他页面顶部颜色*/
 a {
 	background:transparent;
 	text-decoration:none;
-	color:#0088cc;
+	color:#121212;
 }
 /* 文章中的超链接,鼠标悬浮特效*/
 .article-entry a{
     display: inline-block;
     position: relative;
     color: #3555BC;
-    font-family: sans-serif;/* lucida console这种字体的英文比较好看（像代码样式） */
+    font-family: STZhongsong,arial;/* lucida console这种字体的英文比较好看（像代码样式） */
 }
 /* 鼠标悬浮时，变色 */
 .article-entry a:hover{
@@ -670,7 +725,7 @@ i {
 }
 body,button,input,select,textarea {/*修改文章字体样式*/
 	color:#1a1a1a;
-	font-family:sans-serif,lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+	font-family:STSong,lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	font-size:16px;
 	font-size:1rem;
 	line-height:1.75
@@ -719,8 +774,8 @@ body {
 .left-col {
 	/*background:#fff;改为图片*/
 	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201808%2F10%2F20180810143716_jbxlf.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1717536543&t=fd558c7a1d329d750b9858bc0e1ca1b7') no-repeat 0% 20%/ cover;
-	background-position: bottom right;
+    url('https://img.zcool.cn/community/016e1d5cc53d7da8012141689a0be8.jpg@1280w_1l_2o_100sh.jpg') no-repeat 0% 20%/ cover;
+	background-position: bottom left;
 	width:300px;
 	position:fixed;
 	opacity:1;
@@ -750,12 +805,12 @@ body {
 .left-col #header a:hover {
 	color:#0a0a0a
 }
-.left-col #header .header-subtitle {   /*更改下面留言颜色*/
+.left-col #header .header-subtitle {   /*更改下面留言颜色和样式*/
 	text-align:center;
 	color:#1a1a1a;
-	font-family: monospace;
-	font-size:14px;
-	line-height:25px;
+	font-family: STFangsong;
+	font-size:20px;
+	line-height:30px;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	display:-webkit-box;
@@ -792,16 +847,16 @@ body {
 .left-col #header .header-smart-menu a:last-child:after {
 	content:""
 }
-.left-col #header .profilepic {
+.left-col #header .profilepic {  /*设置头像框样式*/
 	display:block;
-	border:5px solid #fff;
+	border:3px solid #fff;
 	border-radius:300px;
 	width:128px;
 	height:128px;
 	margin:0 auto;
 	position:relative;
 	overflow:hidden;
-	background:#88acdb;
+	background:#f7f8f9;
 	-webkit-transition:all .2s ease-in;
 	display:-webkit-box;
 	-webkit-box-orient:horizontal;
@@ -819,10 +874,10 @@ body {
 	height:100%;
 	opacity:1
 }
-.left-col #header .header-author {  /*修改左边作者字体样式*/
+.left-col #header .header-author {  /*修改左边字体样式*/
 	text-align:center;
 	margin:.60em 0;
-	font-family:sans-serif,serif;
+	font-family:STFangsong; /*STCaiyun,STXingkai 中文字体格式https://blog.csdn.net/qq_37750365/article/details/120548903*/
 	font-size:30px;
 	transition:.3s
 }
@@ -889,7 +944,7 @@ body {
 .article-entry .gist .gist-file .gist-data .line-numbers,.article-entry .highlight .gutter pre,.article-entry .highlight .gutter pre .line {
 	color:#666
 }
-.article-entry code,.article-entry pre {
+.article-entry code,.article-entry pre {    /*代码字体样式*/
 	font-family:Source Code Pro,Consolas,Monaco,Menlo,monospace
 }
 .article-entry code {
@@ -946,7 +1001,7 @@ body {
 	color:#fff;
 	min-height:19px
 }
-.article-entry .gist {
+.article-entry .gist {  /*代码块容器*/
 	margin:0 -20px;
 	border-style:solid;
 	border-color:#ddd;
@@ -992,6 +1047,8 @@ body {
 .article-entry .gist .gist-file .gist-meta a:hover {
 	text-decoration:underline
 }
+
+/*代码块中不同类型的代码元素设置不同的颜色*/
 pre .comment {
 	color:lightgreen
 }
@@ -1019,6 +1076,8 @@ pre .css~* .id,pre .id {
 #header .tagcloud a {
 	color:#fff
 }
+
+/*设置标签颜色样式*/
 .tagcloud a {
 	display:inline-block;
 	text-decoration:none;
@@ -1090,7 +1149,7 @@ pre .css~* .id,pre .id {
 .article-tag-list .article-tag-list-item {
 	float:left
 }
-.article-pop-out .icon-tuding {
+.article-pop-out .icon-tuding { /*标签的图钉样式*/
 	color:#999;
 	float:left;
 	margin-right:10px;
@@ -1108,10 +1167,12 @@ pre .css~* .id,pre .id {
 .article-pop-out {
 	float:left
 }
-.archive-article-date {
+.archive-article-date {  /*设置日期显示颜色*/
 	/*color:#999;*/
     color:#4b4949;
-	float:right
+	float:right;
+	cursor:default; /*不改变鼠标光标*/
+	pointer-events: none; /*不触发链接跳转*/
 }
 .archive-article-date .icon {
 	margin:5px 5px 5px 0
@@ -1132,7 +1193,7 @@ pre .css~* .id,pre .id {
 	right:0;
 	top:0
 }
-.tagcloud-ctn {
+.tagcloud-ctn {    /*标签云*/
 	z-index:90120;
 	background-size:100% 100%
 }
@@ -1155,6 +1216,7 @@ pre .css~* .id,pre .id {
 	line-height:80px;
 	text-align:center
 }
+/*这些规则用于为不同类型的文章设置不同的图标颜色。:nth-child(n) 表示选择第 n 个子元素*/
 .tagcloud-ctn .tagcloud-global .tab-post-types .tab-post-type:first-child .post-type-icon {
 	background:#f2992e
 }
@@ -1170,7 +1232,8 @@ pre .css~* .id,pre .id {
 .tagcloud-ctn .tagcloud-global .tab-post-types .tab-post-type:nth-child(5) .post-type-icon {
 	background:#dd765d
 }
-#header .header-nav {
+
+#header .header-nav {   /*社交链接位置调整*/
 	width:100%;
 	position:absolute;
 	transition:-webkit-transform .3s ease-in;
@@ -1189,7 +1252,7 @@ pre .css~* .id,pre .id {
 	-ms-flex-pack:center;
 	justify-content:center
 }
-#header .header-nav .social a {
+#header .header-nav .social a {   /*左下角社交平台*/
 	border-radius:50%;
 	display:-moz-inline-stack;
 	display:inline-block;
@@ -1408,7 +1471,8 @@ pre .css~* .id,pre .id {
 #header .header-nav .social a.psn:hover {
 	border:1px solid #086ef6
 }
-#page-nav {
+
+#page-nav {       /*分页导航*/
 	text-align:center;
 	margin-top:30px
 }
@@ -1444,6 +1508,7 @@ pre .css~* .id,pre .id {
 #page-nav:hover .extend {
 	opacity:1
 }
+
 .archives-wrap { /*归档页背景调整*/
 	position:relative;
 	margin:0 30px;
@@ -1465,12 +1530,13 @@ pre .css~* .id,pre .id {
     font-size: 1.8em;
     z-index: 1;
 }
-.archives-wrap .archive-year-wrap a {
-	color:#0088cc;
+.archives-wrap .archive-year-wrap a { 
+	color:#070707;
 	font-weight:300;
 	font-size: 30px;
 }
-.archives {
+
+.archives { /*归档页面颜色样式*/
     position: relative;
     padding-left: 5%;
     padding-right: 10%;
@@ -1480,13 +1546,13 @@ pre .css~* .id,pre .id {
 .archives .article-info {
 	border:none
 }
-.archives .archive-article {
+.archives .archive-article {  /*边框*/
 	padding:20px 0;
-	border-bottom:1px solid #eee;
+	border-bottom:1px solid #07070770;
 	border-top:1px solid #fff;
 	position:relative
 }
-.archives .archive-article:first-child {
+.archives .archive-article:first-child {   /*取消第一个归档的上边框*/
 	border-top:none
 }
 .archives .archive-article:last-child {
@@ -1498,7 +1564,7 @@ pre .css~* .id,pre .id {
 	transition:color .3s
 }
 .archives .archive-article-title:hover { /*悬停改变背景颜色*/
-	color:#657b83
+	color:#8a9396
 }
 .archives .archive-article-title span {
 	display:block;
@@ -1508,6 +1574,8 @@ pre .css~* .id,pre .id {
 	height:7px;
 	padding-left:2px
 }
+
+/* 在归档文章标题前添加引号图标的样式设置 */
 .archives .archive-article-title span:before {
 	display:inline-block;
 	content:"\201C";
@@ -1517,6 +1585,9 @@ pre .css~* .id,pre .id {
 	margin:4px 4px 0 -12px;
 	color:#c8c8c8
 }
+
+
+/*归档文章的样式，包括日期标签等*/
 .archive-article-inner .icon-clock {
 	margin-right:5px
 }
@@ -1534,7 +1605,7 @@ pre .css~* .id,pre .id {
 	width:auto
 }
 .archive-article-inner .article-meta .article-date time {
-	color:#aaa
+	color:#555
 }
 .archive-article-inner .article-meta .archive-article-date,.archive-article-inner .article-meta .article-tag-list {
 	margin-right:30px;
@@ -1575,6 +1646,8 @@ pre .css~* .id,pre .id {
 	padding-left:8px;
 	font-size:12px
 }
+
+/*tools-col设置smarttab呼出的菜单颜色样式*/
 .tools-col {
 	width:300px;
 	height:100%;
@@ -1596,30 +1669,31 @@ pre .css~* .id,pre .id {
 .tools-col .tools-nav {
 	display:none
 }
-.tools-col .tools-section,.tools-col .tools-wrap {
+.tools-col .tools-section,.tools-col .tools-wrap { /*tag字体颜色和呼出的文本设置*/
 	height:100%;
-	color:#e5e5e5;
+	color:#6a6a6a;
 	width:360px;
 	overflow:hidden;
-	overflow-y:auto
+	overflow-y:auto    /*允许滚动条出现*/
 }
 .tools-col .tools-section::-webkit-scrollbar,.tools-col .tools-wrap::-webkit-scrollbar {
 	display:none
 }
-.tools-col .tools-section .search-wrap {
+.tools-col .tools-section .search-wrap {  /*搜索框*/
 	width:310px;
 	margin:20px 20px 10px;
+	background: rgba(255, 255, 255, 0.05);
 	position:relative
 }
 .tools-col .tools-section .search-wrap .search-ipt {
-	width:310px;
-	color:#fff;
+	width:310px; 
+	color:#111111;/*输入文本颜色*/
 	background:none;
 	border:none;
 	border-bottom:2px solid #fff;
 	font-family:Roboto,serif
 }
-.tools-col .tools-section .search-wrap .icon {
+.tools-col .tools-section .search-wrap .icon {  /*搜索图标*/
 	position:absolute;
 	right:0;
 	top:7px;
@@ -1637,11 +1711,13 @@ pre .css~* .id,pre .id {
 	text-align:center;
 	position:relative
 }
-.tools-col .tools-section .search-tag.tagcloud .search-tag-wording {
-	font-size:12px;
+.tools-col .tools-section .search-tag.tagcloud .search-tag-wording { /*tag文本大小*/
+	font-size:14px;
+	font-family: Arial, Helvetica, sans-serif;
 	float:right;
 	margin:4px 75px 0 0
 }
+/*切换按钮*/
 .tools-col .tools-section .search-tag.tagcloud .search-switch {
 	width:40px;
 	height:25px;
@@ -1663,7 +1739,7 @@ pre .css~* .id,pre .id {
 	content:"";
 	width:40px;
 	height:14px;
-	border:1px solid #bdcabc;
+	border:1px solid #bdcbdc; /*切换前背景颜色*/
 	background-color:#fdfdfd;
 	border-radius:20px;
 	cursor:pointer;
@@ -1675,10 +1751,10 @@ pre .css~* .id,pre .id {
 	transition:border .4s,box-shadow .4s;
 	background-clip:content-box
 }
-.tools-col .tools-section .search-tag.tagcloud .search-switch input:checked:before {
-	border-color:#64bd63;
-	box-shadow:inset 0 0 0 .16rem #64bd63;
-	background-color:#64bd63;
+.tools-col .tools-section .search-tag.tagcloud .search-switch input:checked:before {  /*切换后背景为黑*/
+	border-color:#000000dd;
+	box-shadow:inset 0 0 0 .16rem #000000dd;
+	background-color:#000000dd;
 	transition:border .4s,box-shadow .4s,background-color 1.2s
 }
 .tools-col .tools-section .search-tag.tagcloud .search-switch input:checked:after {
@@ -1687,18 +1763,19 @@ pre .css~* .id,pre .id {
 }
 .tools-col .tools-section .search-tag.tagcloud .search-switch input:after {
 	content:"";
-	width:14px;
-	height:14px;
+	width: 16px;
+	height: 16px;
 	position:absolute;
 	top:16px;
 	left:2px;
 	-webkit-transform:translateY(-50%);
 	border-radius:100%;
-	background-color:#91c0f1;
+	background-color:#000000cc;
 	box-shadow:0 1px 1px rgba(0,0,0,.4);
 	transition:left .2s;
 	cursor:pointer
 }
+
 .tools-col .tools-section .search-tag.tagcloud .article-tag-list {
 	display:none;
 	margin:15px 10px 0;
@@ -1711,6 +1788,7 @@ pre .css~* .id,pre .id {
 .tools-col .tools-section .search-tag.tagcloud .a {
 	float:none
 }
+/*搜索结果展示*/
 .tools-col .tools-section .search-ul {
 	margin-top:10px;
 	color:rgba(77,77,77,.75);
@@ -1720,29 +1798,32 @@ pre .css~* .id,pre .id {
 }
 .tools-col .tools-section .search-ul .search-li {
 	padding:10px 20px;
-	border-bottom:1px dotted #dcdcdc
+	border-bottom:1.5px dotted rgb(128, 128, 128)  /*分隔行*/
 }
-.tools-col .tools-section .search-ul .search-li:hover {
-	background:hsla(0,0%,100%,.2)
+.tools-col .tools-section .search-ul .search-li:hover { /*悬浮时的颜色*/
+	background:rgba(255, 255, 255, 0.3)
 }
 .tools-col .tools-section .search-ul .search-title {
 	overflow:hidden;
 	white-space:nowrap;
 	text-overflow:ellipsis;
 	display:block;
-	color:#fffff8;
-	text-shadow:1px 1px rgba(77,77,77,.25)
-}
-.tools-col .tools-section .search-ul .search-title .icon {
-	margin-right:10px;
-	color:#fffdd8
+	color:#202020;      /*所有文章搜索栏里面的文字颜色*/
+	font-family: STFangsong, arial;
+	font-weight: 555;
+	font-size: 1.2rem;
+	/* text-shadow:1px 1px rgba(77,77,77,.25) */
 }
 .tools-col .tools-section .search-ul .search-title:hover {
 	color:#fff
 }
+.tools-col .tools-section .search-ul .search-title .icon {
+	margin-right:10px;
+	color:rgb(128, 128, 128)
+}
 .tools-col .tools-section .search-ul .search-tag,.tools-col .tools-section .search-ul .search-time {
 	font-size:12px;
-	color:#fffdd8;
+	color:rgb(66, 66, 66);
 	margin-right:10px
 }
 .tools-col .tools-section .search-ul .search-tag .icon,.tools-col .tools-section .search-ul .search-time .icon {
@@ -1760,9 +1841,11 @@ pre .css~* .id,pre .id {
 .tools-col .tools-section .search-ul .search-tag span {
 	margin-right:5px
 }
+/*友链界面设置*/
 .tools-col .tools-section-friends {
 	padding-top:30px
 }
+/*aboutme界面设置*/
 .tools-col .aboutme-wrap {
 	display:-webkit-box;
 	display:-ms-flexbox;
@@ -1775,7 +1858,9 @@ pre .css~* .id,pre .id {
 	justify-content:center;
 	width:100%;
 	height:100%;
-	color:#fffdd8;
+	color:black;   /*此处更改颜色不生效，要到tool.ejs改*/
+	font-family: STKaiti, arial;
+	font-size: 20px;
 	text-shadow:1px 1px rgba(77,77,77,.45)
 }
 .body-wrap>article {
@@ -1808,7 +1893,7 @@ to {
 	-webkit-transform:scale(1);
 	transform:scale(1)
 }
-}.article { /*将白色背景变成透明的*/
+}.article { /*将主页右侧的文章框白色背景变成透明的*/
 	/* margin:30px;
 	position:relative;
 	border:1px solid #ddd;
@@ -1819,7 +1904,7 @@ to {
 	margin: 30px;
     border: 1px solid #ddd;
     border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #000000;
     background: rgba(255,255,255,.5);
     transition: all .2s ease-in;
 	word-break: break-all;
@@ -2591,7 +2676,7 @@ to {
 }
 #footer {
     font-size: 12px;
-    font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace;
+    font-family: serif,Monaco,Andale Mono,lucida console,Courier New,monospace;
     text-shadow: 0 1px #fff;
     position: relative;
     bottom: 20px;
@@ -2998,7 +3083,7 @@ to {
 .header-author {  /*更改左侧昵称字体*/
 	text-align:center;
 	margin:.67em 0;
-	font-family: Roboto,serif;
+	font-family: STFangsong,serif;
 	font-size:30px;
 	transition:.3s
 }
@@ -3554,7 +3639,7 @@ to {
 	line-height:35px;
 	margin-bottom:10px;
 	font-size:30px;
-	font-family: sans-serif; /*更改首页标题字体*/
+	font-family: STFangsong; /*更改首页标题字体*/
 	transition:color .3s
 }
 
@@ -3600,7 +3685,7 @@ to {
     margin-left: 35px;
 }
 .category-all a {
-    color: 0088cc; 
+    color: #0088cc; 
 }
 .category-list-item-list {
 
@@ -3709,10 +3794,7 @@ to {
 	}
 	.mid-col {
     /* min-height:100%; */
-     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-    url('https://hbimg.huabanimg.com/3437f0055e390a5fb9a73a14260e52c90047959086c4-00K7FD_fw658') no-repeat 0% 0%/ cover;
-	background-position: center bottom;   
-	background-size: 100% auto;
+     background: linear-gradient(#00000080, #f5f5f580);
 	}
 	.toc-container.tooltip-left .tooltip-east .tooltip-content {
     max-width: 300px;
@@ -3730,9 +3812,9 @@ to {
    }
 }
 
-/* APlayer 样式 */
+/* APlayer 歌词样式 */
 .aplayer .aplayer-lrc p {
-    color: #0e90d2 !important;
+    color: #353535 !important;
 }
 
 /* footer-support */
