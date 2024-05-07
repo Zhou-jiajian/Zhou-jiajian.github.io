@@ -3,11 +3,11 @@
   <title>长风破浪会有时，直挂云帆济沧海</title>
   
   
-  <link href="https://username.github.io/atom.xml" rel="self"/>
+  <link href="https://www.zakizhou.linkpc.net/atom.xml" rel="self"/>
   
-  <link href="https://username.github.io/"/>
+  <link href="https://www.zakizhou.linkpc.net/"/>
   <updated>2024-05-06T15:41:05.048Z</updated>
-  <id>https://username.github.io/</id>
+  <id>https://www.zakizhou.linkpc.net/</id>
   
   <author>
     <name>Zaki Zhou</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>数学公式math</title>
-    <link href="https://username.github.io/post/a927044d.html"/>
-    <id>https://username.github.io/post/a927044d.html</id>
+    <link href="https://www.zakizhou.linkpc.net/post/a927044d.html"/>
+    <id>https://www.zakizhou.linkpc.net/post/a927044d.html</id>
     <published>2024-05-04T00:07:02.186Z</published>
     <updated>2024-05-06T15:41:05.048Z</updated>
     
@@ -31,17 +31,17 @@
     
     
     
-    <category term="math" scheme="https://username.github.io/categories/math/"/>
+    <category term="math" scheme="https://www.zakizhou.linkpc.net/categories/math/"/>
     
     
-    <category term="math" scheme="https://username.github.io/tags/math/"/>
+    <category term="math" scheme="https://www.zakizhou.linkpc.net/tags/math/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://username.github.io/post/4a17b156.html"/>
-    <id>https://username.github.io/post/4a17b156.html</id>
+    <link href="https://www.zakizhou.linkpc.net/post/4a17b156.html"/>
+    <id>https://www.zakizhou.linkpc.net/post/4a17b156.html</id>
     <published>2024-05-04T00:07:02.184Z</published>
     <updated>2024-05-06T18:31:23.758Z</updated>
     
@@ -52,16 +52,16 @@
     
     
     
-    <category term="博客Blog" scheme="https://username.github.io/categories/%E5%8D%9A%E5%AE%A2Blog/"/>
+    <category term="博客Blog" scheme="https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/"/>
     
-    <category term="hexo" scheme="https://username.github.io/categories/%E5%8D%9A%E5%AE%A2Blog/hexo/"/>
+    <category term="hexo" scheme="https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/hexo/"/>
     
-    <category term="new-yilia" scheme="https://username.github.io/categories/%E5%8D%9A%E5%AE%A2Blog/new-yilia/"/>
+    <category term="new-yilia" scheme="https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/new-yilia/"/>
     
     
-    <category term="hexo" scheme="https://username.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="https://www.zakizhou.linkpc.net/tags/hexo/"/>
     
-    <category term="new-yilia" scheme="https://username.github.io/tags/new-yilia/"/>
+    <category term="new-yilia" scheme="https://www.zakizhou.linkpc.net/tags/new-yilia/"/>
     
   </entry>
   
