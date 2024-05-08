@@ -123,8 +123,9 @@
 	margin-bottom: -4px;
 	padding: 5px 8px 3px;
 }
-.photos-btn.active {
-	color: #08c;
+.photos-btn.active {  /*修改相册页面副标题颜色*/
+	color: rgb(67, 67, 67);
+	font-family: STSong, arial;
 	border: 1px solid #e5e5e5;
 	border-bottom: 5px solid #fff;
 }

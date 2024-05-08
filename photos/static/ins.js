@@ -116,8 +116,8 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://qiniu.findn.cn/blog/photos/min_photos/' + data.link[i];
-          var src = 'https://qiniu.findn.cn/blog/photos/photos/' + data.link[i];
+          var minSrc = 'http://tuchuang.862447072.xyz/picture/min_photos/' + data.link[i];
+          var src = 'http://tuchuang.862447072.xyz/picture/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '';
