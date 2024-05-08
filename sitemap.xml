@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zakizhou.linkpc.net/photos/data.json</loc>
+    
+    <lastmod>2024-05-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zakizhou.linkpc.net/photos/video.html</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zakizhou.linkpc.net/photos/index.html</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.zakizhou.linkpc.net/music/index.html</loc>
     
     <lastmod>2024-05-07</lastmod>
@@ -29,16 +56,7 @@
   </url>
   
   <url>
-    <loc>https://www.zakizhou.linkpc.net/photos/index.html</loc>
-    
-    <lastmod>2024-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zakizhou.linkpc.net/photos/video.html</loc>
+    <loc>https://www.zakizhou.linkpc.net/archives/index.html</loc>
     
     <lastmod>2024-05-03</lastmod>
     
@@ -55,50 +73,32 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://www.zakizhou.linkpc.net/photos/data.json</loc>
-    
-    <lastmod>2024-05-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zakizhou.linkpc.net/archives/index.html</loc>
-    
-    <lastmod>2024-05-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://www.zakizhou.linkpc.net/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.zakizhou.linkpc.net/tags/math/</loc>
-    <lastmod>2024-05-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zakizhou.linkpc.net/tags/hexo/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.zakizhou.linkpc.net/tags/new-yilia/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zakizhou.linkpc.net/tags/math/</loc>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -106,29 +106,29 @@
 
   
   <url>
-    <loc>https://www.zakizhou.linkpc.net/categories/math/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <loc>https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/</loc>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <loc>https://www.zakizhou.linkpc.net/categories/math/</loc>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/hexo/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.zakizhou.linkpc.net/categories/%E5%8D%9A%E5%AE%A2Blog/new-yilia/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
